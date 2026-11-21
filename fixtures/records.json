@@ -1,29 +1,76 @@
 {
   "dataset": "judgment",
+  "catalogs": {
+    "standards": [
+      {
+        "id": "std-1",
+        "version": "v1",
+        "effective": "2026-08-01"
+      },
+      {
+        "id": "std-1",
+        "version": "v2",
+        "effective": "2026-10-01"
+      }
+    ],
+    "scenarios": [
+      {
+        "id": "sc-1",
+        "standard": "std-1",
+        "domain": "allergy-and-handover"
+      },
+      {
+        "id": "sc-2",
+        "standard": "std-1",
+        "domain": "supply-substitution"
+      }
+    ]
+  },
   "records": [
     {
-      "id": "j-01",
-      "scenario": "medication-label-conflict",
-      "standard": "v1",
-      "tool_advice": "follow label",
-      "student_reason": "checked patient allergy",
+      "id": "j-1",
+      "kind": "practice",
+      "learner": "l-1",
+      "scenario": "sc-1",
+      "standard_version": "v1",
+      "tool_advice": "follow-label",
+      "checked_fact": "allergy-history",
       "teacher_review": "sound"
     },
     {
-      "id": "j-02",
-      "scenario": "supply-shortage",
-      "standard": "v1",
-      "tool_advice": "use substitute",
-      "student_reason": "no reason recorded",
-      "teacher_review": "needs-review"
+      "id": "j-2",
+      "kind": "transfer",
+      "learner": "l-1",
+      "scenario": "sc-2",
+      "standard_version": "v1",
+      "tool_used": false,
+      "status": "not-scheduled"
     },
     {
-      "id": "j-03",
-      "scenario": "medication-label-conflict",
-      "standard": "v2",
-      "tool_advice": "follow label",
-      "student_reason": "checked allergy and expiry",
-      "teacher_review": "sound"
+      "id": "j-3",
+      "kind": "transfer",
+      "learner": "l-2",
+      "scenario": "sc-1",
+      "standard_version": "v1",
+      "tool_used": false,
+      "status": "completed",
+      "decision": "unsafe"
+    },
+    {
+      "id": "j-4",
+      "kind": "placement-review",
+      "learner": "l-1",
+      "reviewer": "practicum-lead",
+      "decision": "pending",
+      "standard_version": "v2"
+    },
+    {
+      "id": "j-5",
+      "kind": "remediation",
+      "learner": "l-2",
+      "scenario": "sc-1",
+      "status": "assigned",
+      "standard_version": "v2"
     }
   ]
 }

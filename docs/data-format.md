@@ -1,5 +1,5 @@
-# 记录格式
+# 合成课程资料格式
 
-情境判断记录以 id、scenario、standard、tool_advice、student_reason、teacher_review 保存情境、标准版本、建议、学生理由及教师复核。
+情境标准目录含标准版本及生效日期，scenario 指向标准。practice、transfer、placement-review 和 remediation 记录分别描述练习、无工具迁移、准入复核及补练安排。
 
-记录以 UTF-8 JSON 保存，顶层包含 dataset 和 records。每条记录的 id 在文件中唯一。`fixtures/records.json` 中的例子用于说明输入字段和状态取值。
+夹具只包含虚构的课程、任务和学习事件，不含真实学生资料，也不预先给出分析结论。项目当前入口仅检查夹具格式。
