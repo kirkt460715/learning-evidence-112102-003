@@ -1,0 +1,29 @@
+{
+  "dataset": "judgment",
+  "records": [
+    {
+      "id": "j-01",
+      "scenario": "medication-label-conflict",
+      "standard": "v1",
+      "tool_advice": "follow label",
+      "student_reason": "checked patient allergy",
+      "teacher_review": "sound"
+    },
+    {
+      "id": "j-02",
+      "scenario": "supply-shortage",
+      "standard": "v1",
+      "tool_advice": "use substitute",
+      "student_reason": "no reason recorded",
+      "teacher_review": "needs-review"
+    },
+    {
+      "id": "j-03",
+      "scenario": "medication-label-conflict",
+      "standard": "v2",
+      "tool_advice": "follow label",
+      "student_reason": "checked allergy and expiry",
+      "teacher_review": "sound"
+    }
+  ]
+}
